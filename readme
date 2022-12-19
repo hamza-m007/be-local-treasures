@@ -1,0 +1,16 @@
+-start MongoDB
+sudo systemctl start mongod
+
+-Check status
+sudo systemctl status mongod
+
+-Stop MongoDB
+sudo systemctl stop mongod
+
+-Restart MongoDB
+sudo systemctl restart mongod
+
+-Begin using MongoDB
+mongosh
+
+
