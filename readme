@@ -13,4 +13,8 @@ sudo systemctl restart mongod
 -Begin using MongoDB
 mongosh
 
-
+ -Testing with mocha
+ npm i mocha
+ change scripts
+ npm i assert. make sure it's not deconstructed in when requiring.
+ npm test

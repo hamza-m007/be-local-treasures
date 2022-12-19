@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "mocha",
     "devStart": "nodemon server.js"
   },
   "repository": {
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/hamza-m007/be-local-treasures#readme",
   "dependencies": {
+    "assert": "^2.0.0",
     "express": "^4.18.2",
     "mocha": "^10.2.0",
     "mongoose": "^6.8.0"
