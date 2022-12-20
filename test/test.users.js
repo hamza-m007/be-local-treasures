@@ -19,7 +19,7 @@ describe("user test", () => {
   it("new user", (done) => {
     newUser.save().then(() => {
       assert(newUser.isNew === false);
-      done();
     });
+    done();
   });
 });
