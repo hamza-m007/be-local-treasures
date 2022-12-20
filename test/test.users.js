@@ -5,8 +5,8 @@ const seedDB = require("../seed");
 const { doesNotMatch } = require("assert");
 const Users = require("../schemaModels/users");
 
-seedDB().then(() => {
-  mongoose.connection.close();
+beforeEach(() => {
+  seedDB();
 });
 
 describe("user test", () => {

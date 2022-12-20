@@ -5,7 +5,7 @@ const { Users } = require("./schemaModels/users");
 mongoose.set("strictQuery", false);
 
 mongoose
-  .connect("mongodb://localhost/treasure", { useNewUrlParser: true })
+  .connect("mongodb://localhost/treasures", { useNewUrlParser: true })
   .then(() => {
     console.log("connection open");
   })
