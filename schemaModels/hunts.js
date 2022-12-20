@@ -17,13 +17,13 @@ const checkpointSchema = new Schema({
 const huntSchema = new Schema({
   title: String,
   location: String,
-  checkpoints: checkpointSchema,
+  checkpoints: Object,
   distance: Number,
 });
 
 const Hunts = mongoose.model("hunts", huntSchema);
 
-module.exports = { Hunts };
+module.exports =  Hunts ;
 
 /*
  

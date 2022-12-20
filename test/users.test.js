@@ -1,13 +1,14 @@
 const { mongoose } = require("mongoose");
 const assert = require("assert");
-const { beforeAll, before, after, beforeEach } = require("mocha");
+const {  after, beforeEach } = require("mocha");
 const seedDB = require("../seed");
-const { doesNotMatch } = require("assert");
 const Users = require("../schemaModels/users");
 
 beforeEach(() => {
+  console.log('user testing start')
   seedDB();
 });
+
 
 describe("user test", () => {
   const newUser = new Users({
@@ -23,3 +24,8 @@ describe("user test", () => {
     done();
   });
 });
+
+after(()=> {
+  console.log('user testing stop')
+  mongoose.connection.close()
+})

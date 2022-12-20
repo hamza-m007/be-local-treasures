@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
-const { Hunts } = require("./schemaModels/hunts");
-const { Users } = require("./schemaModels/users");
+const  Hunts  = require("./schemaModels/hunts");
+const Users  = require("./schemaModels/users");
+
 
 mongoose.set("strictQuery", false);
 
@@ -45,16 +46,17 @@ const seedHunts = [
         lat: 53.796638,
         long: -1.5926,
       },
-      distance: 3,
-    },
+      
+    },distance: 3,
   },
 ];
 
 const seedDB = async () => {
   await Users.deleteMany({});
-  await Users.insertMany(seedUsers);
   await Hunts.deleteMany({});
+  await Users.insertMany(seedUsers);
   await Hunts.insertMany(seedHunts);
+  console.log('here')
 };
 
 seedDB().then(() => {
